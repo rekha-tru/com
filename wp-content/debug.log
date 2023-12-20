@@ -335,3 +335,16 @@ Stack trace:
 [11-Dec-2023 07:16:19 UTC] PHP Warning:  chdir(): No such file or directory (errno 2) in /usr/local/var/www/wordpress/wp-content/plugins/git_main/git_main.php on line 53
 [11-Dec-2023 07:16:21 UTC] PHP Warning:  chdir(): No such file or directory (errno 2) in /usr/local/var/www/wordpress/wp-content/plugins/git_main/git_main.php on line 53
 [20-Dec-2023 05:59:44 UTC] PHP Parse error:  syntax error, unexpected token "}" in /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/git_controller.php on line 352
+[20-Dec-2023 06:51:41 UTC] PHP Warning:  Undefined variable $wpdb in /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/git_controller.php on line 211
+[20-Dec-2023 06:51:41 UTC] PHP Warning:  Attempt to read property "prefix" on null in /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/git_controller.php on line 211
+[20-Dec-2023 06:51:41 UTC] PHP Warning:  Undefined variable $wpdb in /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/git_controller.php on line 216
+[20-Dec-2023 06:51:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function update() on null in /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/git_controller.php:216
+Stack trace:
+#0 /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/view/repos.php(34): te\app\thm_cnt\git_controller->create_branch(Array)
+#1 /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/controller.php(39): include('/usr/local/var/...')
+#2 /usr/local/var/www/wordpress/wp-includes/class-wp-hook.php(324): te\app\cnt\git_main_controller->git_main_repos_callback('')
+#3 /usr/local/var/www/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /usr/local/var/www/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /usr/local/var/www/wordpress/wp-admin/admin.php(259): do_action('github_page_git...')
+#6 {main}
+  thrown in /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/git_controller.php on line 216

@@ -189,6 +189,7 @@ class git_controller {
 
 		}
 		public function create_branch($post){
+			global $wpdb;
 			$account = $this->get_current_account();
 			$username = $account->username;
 			$accessToken = $this->encrypt_decrypt('decrypt',$account->personal_access_token);
