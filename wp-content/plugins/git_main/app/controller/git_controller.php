@@ -240,7 +240,7 @@ class git_controller {
 			//header('Location: ' . $redirectUrl);
 			$this->redirect('admin.php?page=git_main_repos&msg='.$msg.'&type='.$type);
 			echo '<meta http-equiv="refresh" content="5;url=' . htmlspecialchars($redirectUrl, ENT_QUOTES, 'UTF-8') . '">';
-			echo 'Redirecting to ' . $redirectUrl . ' in 5 seconds...';
+			echo 'Refreshing page in 5 seconds...';
 		}
 		public function create_repo($post){
 			
