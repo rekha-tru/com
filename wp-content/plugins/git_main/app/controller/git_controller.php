@@ -200,10 +200,22 @@ class git_controller {
 
 			chdir($repositoryPath);
 			if (is_dir('.git')) {
+				exec('git add .');
+				exec("git commit -m 'Commiting before switching branch'");
+
 				$command = "git checkout -b {$newBranchName}";
 				exec($command, $output, $returnCode);
 				exec('git branch');
 				if ($returnCode === 0) {
+					//updatin database with current branch
+					$tablename=$wpdb->prefix.'current_linked_repo';
+					if($current_repo){
+						$data_update = array('branch_name'=>$newBranchName);
+						$data_where = array('account_id'=>$account->id);
+
+						$wpdb->update($tablename, $data_update, $data_where);
+					}
+
 					exec('git checkout {$newBranchName}');
 					exec('git fetch origin');
 					$pushCommand = "git push origin {$newBranchName}";
