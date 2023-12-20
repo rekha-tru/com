@@ -159,10 +159,9 @@ function git_push_callback() {
 			}
 			$outputPush = exec("git push origin {$branch} 2>&1",$Output,$statuscode);
 
-			
 			$res =  '<div data-bs-theme="dark" class="error-div">';
 			foreach($Output as $text){
-				$res .= '<p>'.$text.'</p>';
+				$res .= '<p>'.$text.'</p> ';
 			}
 			
 			$res .= '</div>';
