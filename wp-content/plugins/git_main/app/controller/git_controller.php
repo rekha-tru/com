@@ -207,7 +207,7 @@ class git_controller {
 				exec($command, $output, $returnCode);
 				exec('git branch');
 				if ($returnCode === 0) {
-					//updatin database with current branch
+					//updatin database with current branch.
 					$tablename=$wpdb->prefix.'current_linked_repo';
 					if($current_repo){
 						$data_update = array('branch_name'=>$newBranchName);
