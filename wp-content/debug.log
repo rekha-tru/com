@@ -348,3 +348,4 @@ Stack trace:
 #5 /usr/local/var/www/wordpress/wp-admin/admin.php(259): do_action('github_page_git...')
 #6 {main}
   thrown in /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/git_controller.php on line 216
+[20-Dec-2023 06:59:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /usr/local/var/www/wordpress/wp-includes/script-loader.php:2925) in /usr/local/var/www/wordpress/wp-content/plugins/git_main/app/controller/git_controller.php on line 240

@@ -238,8 +238,8 @@ class git_controller {
 			}
 			$redirectUrl = 'admin.php?page=git_main_repos&msg='.$msg.'&type='.$type;
 			header('Location: ' . $redirectUrl);
-			echo '<meta http-equiv="refresh" content="5;url=' . htmlspecialchars($redirectUrl, ENT_QUOTES, 'UTF-8') . '">';
-			echo 'Redirecting to ' . $redirectUrl . ' in 5 seconds...';
+			//echo '<meta http-equiv="refresh" content="5;url=' . htmlspecialchars($redirectUrl, ENT_QUOTES, 'UTF-8') . '">';
+			//echo 'Redirecting to ' . $redirectUrl . ' in 5 seconds...';
 			
 
 			//$this->redirect('admin.php?page=git_main_repos&msg='.$msg.'&type='.$type);
